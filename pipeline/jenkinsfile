@@ -5,8 +5,11 @@ pipeline {
         stage('Install Rasa on Ubuntu') {
             steps {
                 script {
+                    // Récupérer le script d'installation depuis GitHub
+                    sh 'curl -o /tmp/install_rasa.sh https://raw.githubusercontent.com/Mfourga/My_Ai/main/install_rasa.sh'
+                    
                     // Copier le script d'installation dans le pod Ubuntu
-                    sh 'kubectl cp install_rasa.sh ubuntu-deployment-7c8957798c-gwc4d:/tmp/install_rasa.sh'
+                    sh 'kubectl cp /tmp/install_rasa.sh ubuntu-deployment-7c8957798c-gwc4d:/tmp/install_rasa.sh'
                     
                     // Rendre le script exécutable dans le pod Ubuntu
                     sh 'kubectl exec ubuntu-deployment-7c8957798c-gwc4d -- chmod +x /tmp/install_rasa.sh'
