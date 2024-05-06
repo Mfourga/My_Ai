@@ -1,0 +1,121 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - start_program
+  - new_action
+  - ask_schedule
+  - ask_drills
+  - ask_match
+  - ask_rest_day
+  - ask_training_location
+  - ask_coach
+  - ask_equipment
+  - ask_team_strategy
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_empoi_du_temps:
+  - text: "Here's the weekly training schedule:"
+
+  utter_day_1:
+  - text: "Day 1:"
+
+  utter_day_2:
+  - text: "Day 2:"
+
+  utter_day_3:
+  - text: "Day 3:"
+
+  utter_day_4:
+  - text: "Day 4:"
+
+  utter_day_5:
+  - text: "Day 5:"
+
+  utter_day_6:
+  - text: "Day 6:"
+
+  utter_day_7:
+  - text: "Day 7:"
+
+  utter_warm_up:
+  - text: "Warm-up session"
+
+  utter_shooting_drills:
+  - text: "Shooting drills"
+
+  utter_passing_drills:
+  - text: "Passing drills"
+
+  utter_dribbling_drills:
+  - text: "Dribbling drills"
+
+  utter_defensive_drills:
+  - text: "Defensive drills"
+
+  utter_scrimmage:
+  - text: "Scrimmage"
+
+  utter_rest_day:
+  - text: "Rest day"
+
+  utter_friendly_match:
+  - text: "Friendly match"
+
+  utter_schedule:
+  - text: |
+      Here's the training schedule for this week:
+      - Monday: 9:00 AM - Warm-up, Shooting drills
+      - Tuesday: 10:00 AM - Passing drills, Defensive drills
+      - Wednesday: Rest day
+      - Thursday: 9:30 AM - Dribbling drills, Scrimmage
+      - Friday: 10:00 AM - Team strategy session, Friendly match
+      - Saturday: 11:00 AM - Shooting drills, Defensive drills
+      - Sunday: Rest day
+
+  utter_drills:
+  - text: "Today's drills include shooting, passing, dribbling, and defensive drills."
+
+  utter_match:
+  - text: "Our next match is scheduled for [29 avril 2024]."
+
+  utter_training_location:
+  - text: "Today's practice will be held at [Pointe Noire]."
+
+  utter_coach:
+  - text: "Coach [Luc Okalobe] will be leading today's session."
+
+  utter_equipment:
+  - text: "Please make sure to bring your basketball shoes, water bottle, and towel to practice."
+
+  utter_team_strategy:
+  - text: "Our team's strategy for the next game is to focus on strong defense and fast breaks."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

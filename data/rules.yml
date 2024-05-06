@@ -1,0 +1,39 @@
+version: "3.1"
+
+rules:
+- rule: Respond to greetings and provide training schedule when asked
+  steps:
+  - intent: greet
+  - action: utter_greet
+- rule: Provide training schedule when asked
+  steps:
+  - intent: ask_schedule
+  - action: utter_schedule
+- rule: Provide information about drills when asked
+  steps:
+  - intent: ask_drills
+  - action: utter_drills
+- rule: Provide information about the next match when asked
+  steps:
+  - intent: ask_match
+  - action: utter_match
+- rule: Inform about rest day when asked
+  steps:
+  - intent: ask_rest_day
+  - action: utter_rest_day
+- rule: Inform about training location when asked
+  steps:
+  - intent: ask_training_location
+  - action: utter_training_location
+- rule: Inform about the coach when asked
+  steps:
+  - intent: ask_coach
+  - action: utter_coach
+- rule: Inform about required equipment when asked
+  steps:
+  - intent: ask_equipment
+  - action: utter_equipment
+- rule: Inform about team strategy when asked
+  steps:
+  - intent: ask_team_strategy
+  - action: utter_team_strategy
