@@ -8,7 +8,7 @@ pipeline {
                     // Installer kubectl à partir des référentiels Kubernetes
                     sh 'curl -LO "https://dl.k8s.io/release/v1.23.2/bin/linux/amd64/kubectl"'
                     sh 'chmod +x kubectl'
-                    sh 'sudo mv kubectl /usr/local/bin/'
+                    sh 'mv kubectl /usr/local/bin/'
                 }
             }
         }
