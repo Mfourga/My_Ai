@@ -2,6 +2,16 @@ pipeline {
     agent any
     
     stages {
+        stage('Install kubectl') {
+            steps {
+                script {
+                    // Installer kubectl
+                    sh 'apt-get update'
+                    sh 'apt-get install -y kubectl'
+                }
+            }
+        }
+        
         stage('Install Rasa on Ubuntu') {
             steps {
                 script {
